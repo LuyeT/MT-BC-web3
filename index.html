@@ -4,22 +4,41 @@
   <meta charset="UTF-8">
   <title>Calculator project</title>
   <link rel="stylesheet" href="./mystyle.css">
+  <script src="./calc.js">
 </head>
-<body>
+<body onload="clearEverything()">
   <div id="page_container"> 
     <main> 
       <div id="content_container">
-
         <div id="input_field_container">
-          <input type="text" class="input_field">
-          <input type="text" class="input_field">
+          <input type="number" class="input_field" id="input1">
+          <input type="number" class="input_field" id="input2">
         </div>
-        <div id="radio_buttons">
-          <input type="radio" name="operators" class="operator_buttons">
-          <input type="radio" name="operators" class="operator_buttons">
-          <input type="radio" name="operators" class="operator_buttons">
-          <input type="radio" name="operators" class="operator_buttons">
-        </div> 
+          <div id="radio_buttons">
+            <div class="operator_descriptor">
+              <input type="radio" name="radio" id="operator_add" value="add" />
+              <label for="operator_add">Add</label>
+            </div>
+            <div class="operator_descriptor">
+              <input type="radio" name="radio" id="operator_subtract" value="subtract" />
+              <label for="operator_subtract">Subtract</label>
+            </div>
+            <div class="operator_descriptor">
+              <input type="radio" name="radio" id="operator_multiply" value="multiply" />
+              <label for="operator_multiply">Multiply</label>
+            </div>
+            <div class="operator_descriptor">
+              <input type="radio" name="radio" id="operator_divide" value="divide" />
+              <label for="operator_divide">Divide</label>
+            </div>
+          </div>
+        <div id="button_container" class="center">
+          <button id="equals" class="center submit_button" onClick="submitCalc()"> = </button>
+          <button id="clear" class="center submit_button" onClick="clearEverything()">Clear</button>
+        </div>
+        <div id="output_container" class="center">
+          <p id="output_field" value=""> <p>
+        </div>
       </div>
     </main>
   </div>

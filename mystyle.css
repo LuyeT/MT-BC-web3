@@ -1,26 +1,83 @@
+#page_container {
+  height: 98vh;
+}
 #content_container {
   width: 600px;
-  height: 800px;
-  margin: auto;
+  height: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background-color:lightblue;
 }
-
+.center {
+  margin: auto;
+}
 #input_field_container {
   display:flex;
   width: 100%;
-  background-color: purple;
+  background-color: lightblue;
 }
 
 .input_field {
   flex-grow: 1;
-  margin: 100px 50px 25px; 
+  margin: 50px 50px 25px; 
 }
 
 #radio_buttons {
   display:flex;
-  margin: 25px 100px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 100px 0 100px;
+  flex-wrap: wrap;
+}
+
+input:checked ~ label{
+  font-weight:bold;
 }
 
 .operator_buttons {
+  width:100%;
+}
+
+.operator_descriptor {
   flex-grow: 1;
+  height: 30px;
+  width: 85px;
+  display: inline-block;
+  text-align: center;
+}
+
+.operator_descriptor label {
+  display: block;
+}
+
+#button_container {
+  width: 300px;
+  height: 150px;
+  display: flex;
+}
+.submit_button {
+  margin-top: 50px;
+}
+
+#equals {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#clear {
+  background-color: pink;
+  color: green;
+}
+
+#output_container {
+  background-color: lightgray;
+  width: 400px;
+  height: 150px;
+}
+
+#output_field { 
+  text-align: center;
+  font-size: 1.5em;
 }
